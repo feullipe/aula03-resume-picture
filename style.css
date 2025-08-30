@@ -1,0 +1,99 @@
+/* General body style */
+
+body {
+    background-color: #f2f2f2;
+    font-family: "Open Sans", Verdana, sans-serif;
+    color: #333;
+    margin: 50px;
+    padding: absolute;
+    font-size: 1.1em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Imagem */
+
+.avatar{
+    width: 180px;
+    height: 180px;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 24px #0000001F;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    margin: auto;
+    flex-shrink: 0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 0.2em solid #1E3A8A;
+}
+
+/* Títulos*/
+
+h1, h2 {
+    font-family: "Roboto", Verdana, sans-serif;
+    color: #1E3A8A;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 50px;
+    color: #333;
+}
+
+/* Subtítulos */
+h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 0.1em solid #1E3A8A;
+}
+
+#subtitle {
+    font-weight:bold;
+    border: none;
+   }
+
+/* Container for the whole line */
+.job {
+    display: flex; /* puts items on one line */
+    align-items: baseline; /* aligns text nicely by baseline */
+    gap: 8px; /* small space around the dash */
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    font-size: 1.1em;
+}
+
+/* Make the organization/location bold */
+.job-company {
+    font-weight: 700;
+}
+
+/* Make the role italic and lighter in color */
+.job-role {
+    font-style: italic;
+    color: #6B7280; /* a readable soft gray */
+}
+
+/* Push dates to the far right */
+.job-dates {
+    margin-left: auto; /* moves this span to the right edge */
+    white-space: nowrap; /* keeps the date in one piece */
+    color: #6B7280;
+}
+
+/* Optional mobile tweak: stack neatly on narrow screens */
+@media (max-width: 600px) {
+    .job {
+        flex-direction: column;
+    }
+
+    .job-dates {
+        align-self: flex-end;
+        /* keeps dates right-aligned when stacked */
+        margin-left: 0;
+        margin-top: 2px;
+    }
+}
